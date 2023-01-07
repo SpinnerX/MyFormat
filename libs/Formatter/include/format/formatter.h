@@ -17,13 +17,13 @@ namespace MyFormatter{
             std::size_t pos = 0;
 
             for (std::size_t i = 0; i < arg_list.size(); ++i) {
-            std::size_t open_bracket = message.find("{}", pos);
-            if (open_bracket == std::string::npos) break;
-            result += message.substr(pos, open_bracket - pos);
-            // DEBUGGING purpose.
-            // if(arg_list[i].type() == typeid(std::string)) std::cout << "Debug: " << get_string_from_any(arg_list[i]) << std::endl;
-            result += get_string_from_any(arg_list[i]);
-            pos = open_bracket + 2;
+                std::size_t open_bracket = message.find("{}", pos);
+                if (open_bracket == std::string::npos) break;
+                result += message.substr(pos, open_bracket - pos);
+                // DEBUGGING purpose.
+                // if(arg_list[i].type() == typeid(std::string)) std::cout << "Debug: " << get_string_from_any(arg_list[i]) << std::endl;
+                result += get_string_from_any(arg_list[i]);
+                pos = open_bracket + 2;
             }
             result += message.substr(pos);
             return result;
