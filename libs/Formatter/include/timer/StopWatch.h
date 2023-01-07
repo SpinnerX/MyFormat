@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <chrono>
 
-namespace Logger_Interface{
+namespace MyFormatter{
     /**
      * @brief 
      * This class handles by showing us our elapsed time.
@@ -18,8 +18,7 @@ namespace Logger_Interface{
         std::chrono::duration<double> elapsed() const { // This is our ending time.
             return std::chrono::duration<double>(clock::now() - start_tp);
         }
-
-
+        
     private:
         std::chrono::time_point<clock> start_tp;
     };
