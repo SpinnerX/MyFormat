@@ -1,7 +1,9 @@
 #include <iostream>
-#include <MyFormatter.h>
+#include <basicStringViewTest.h>
 using namespace std;
 
+
+
 int main(){
-    MyFormatter::print("This is {} and he is {} years old!", "Bob", 2);
+    test_basic_string_view();
 }
