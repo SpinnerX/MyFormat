@@ -1,5 +1,4 @@
-#include <formatter.h>
-
+#include "formatter.h"
 
 namespace MyFormatter{
     /**
@@ -33,6 +32,7 @@ namespace MyFormatter{
     }
 
     bool operator==(const messageFormatter& other){ return message == other.message; }
+    bool operator==(const std::string& other) { return message == other; }
     
     private:
         std::string message;
